@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='main.js'></script>
+</head>
+<body style="background-color:green;">
+    <p > Aqui está paragrafo</p>
+        <h1>Se o conteúdo do input text for maior que 8 o fundo do <body>
+            mudará a cor para purple.
+        </body></h1>
+
+        <input id="input1" type="input" onkeyup="tamanhoInput()" />
+        <input type="submit" ondblclick="alert('dois cliques')" />
+        <input id="input2" />
+        <p id="p1" ></p>
+
+        
+    <script>
+        function tamanhoInput(){
+            let input1 = document.getElementById("input1");
+            let p1 = document.getElementById("p1");
+            p1.innerText = input1.value.length;
+            if(input1.value.length >= 8){
+                let body = document.getElementsByTagName("body")[0];
+                body.style.backgroundColor = document.getElementById("input2").value;
+            }
+            console.log(input1.value.length);
+        }
+    </script>
+</body>
+</html>
